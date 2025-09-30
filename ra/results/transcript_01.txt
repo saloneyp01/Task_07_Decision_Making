@@ -1,0 +1,25 @@
+FACTS:
+Games: 19
+Goals_total: 469
+Assists_total: 224
+Points_total: 693
+Shots_total: 1076
+Shots_on_goal_total: 803
+Shot_pct_team: 0.746
+Goals_per_game: 24.68
+Shots_per_game: 56.6
+Assists_per_game: 11.79
+SOG_per_game: 42.3
+
+QUESTION:
+What is the team’s goals per game and what does that suggest about offensive strength?
+
+LLM RESPONSE:
+The team’s Goals per Game (GPG) is given as 24.68.
+What this means:
+Scoring nearly 25 goals every game on average is exceptionally high.
+It suggests that the team has a very strong offensive unit, capable of generating consistent scoring opportunities and converting them effectively.
+When paired with the high shots per game (56.6) and shots on goal per game (42.3), this indicates that the offense is not only shooting frequently but also maintaining good accuracy and pressure on opposing defenses.
+In short: 24.68 GPG signals an elite, high-powered offense—the team is likely dominating possession, creating sustained scoring chances, and converting at a rate that would overwhelm most opponents.
+
+Would you like me to also compare this goals-per-game rate to typical benchmarks (like NHL or international hockey averages) so you can better see how extreme this number is?

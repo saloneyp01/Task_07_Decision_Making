@@ -1,0 +1,29 @@
+FACTS:
+player	gp	g	a	pts	goals_pg	assists_pg	ppg
+Total	19.0	235.0	112.0	347.0	12.37	5.89	18.263157894736800
+Ward, Emma	19.0	30.0	46.0	76.0	1.58	2.42	4.0
+Trinkaus, Caroline	19.0	32.0	11.0	43.0	1.68	0.58	2.263157894736840
+Muchnick, Emma	19.0	34.0	7.0	41.0	1.79	0.37	2.1578947368421100
+Britton, Gracie	19.0	20.0	10.0	30.0	1.05	0.53	1.5789473684210500
+Vogelman, Alexa	19.0	21.0	6.0	27.0	1.11	0.32	1.4210526315789500
+Cotter, Mileena	19.0	21.0	2.0	23.0	1.11	0.11	1.2105263157894700
+Caramelli, Joely	19.0	16.0	4.0	20.0	0.84	0.21	1.0526315789473700
+Guzik, Molly	19.0	14.0	5.0	19.0	0.74	0.26	1.0
+Desimone, Carlie	15.0	3.0	9.0	12.0	0.2	0.6	0.8
+DeVito, Sam	19.0	8.0	2.0	10.0	0.42	0.11	0.5263157894736840
+Parker, Annie	15.0	6.0	1.0	7.0	0.4	0.07	0.4666666666666670
+Rode, Meghan	17.0	1.0	0.0	1.0	0.06	0.0	0.058823529411764700
+Guyette, Daniella	19.0	0.0	0.0	0.0	0.0	0.0	0.0
+Benoit, Kaci	19.0	0.0	0.0	0.0	0.0	0.0	0.0
+Vandiver, Coco	19.0	0.0	0.0	0.0	0.0	0.0	0.0
+Clark, Superia	16.0	0.0	0.0	0.0	0.0	0.0	0.0
+
+QUESTION:
+Which players contribute most consistently to overall points (G+A) per game?
+
+LLM RESPONSE:
+
+Emma Ward is the most consistent contributor, averaging 4.0 points per game — driven heavily by her 2.42 assists_pg (playmaking + scoring).
+Caroline Trinkaus follows with 2.26 PPG, balanced but more goal-heavy.
+Emma Muchnick is close behind with 2.16 PPG, leading the team in goals (34) but less assist-heavy.
+Supporting contributors: Gracie Britton (1.58 PPG) and Alexa Vogelman (1.42 PPG) round out the top 5.

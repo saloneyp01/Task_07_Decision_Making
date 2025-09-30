@@ -1,0 +1,23 @@
+FACTS:
+player	gp	g	sh	sog	shot_pct	goals_pg	efficiency_score
+Total	19.0	235.0	538.0	402.0	0.747	12.37	0.8988
+Peters, Bri		2.0	3.0	3.0	1.0	0.0	0.4051063829787230
+Rich, Mackenzie		1.0	1.0	1.0	1.0	0.0	0.40255319148936200
+Reber, Lexi	8.0	0.0	1.0	1.0	1.0	0.0	0.4
+Lahah, Izzy	2.0	0.0	2.0	2.0	1.0	0.0	0.4
+
+QUESTION:
+Who is the most efficient scorer when considering shot percentage and total goals?
+
+LLM RESPONSE:
+To answer “Who is the most efficient scorer when considering shot percentage and total goals?”, we need to balance volume (total goals) and accuracy (shot %).
+Key Observations:
+Reber and Lahah both show a 100% shot percentage (1/1 and 2/2 on target), but scored 0 goals → accuracy high, but no goals.
+Peters has the highest goals (2) among these listed, but her shot percentage is 0%, meaning she wasn’t converting on target.
+Efficiency Score column suggests that Peters (0.405) slightly edges Rich (0.403) in overall modelled efficiency.
+Best Answer:
+If you strictly combine goals + shot percentage:
+None of the players here balance both well.
+Among these, Peters, Bri is the “most efficient” by goals scored (2 goals, though low shot %), since the others have 0 goals.
+Final phrasing:
+Bri Peters is the most efficient scorer in this subset, since she has the highest goal total (2), even though her shot percentage is lower. Players like Reber and Lahah had perfect accuracy but did not score, so they cannot be considered efficient scorers.

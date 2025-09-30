@@ -1,0 +1,34 @@
+QUESTION: Using the facts above, what key contextual data is missing?
+
+LLM RESPONSE:
+Missing Contextual Data
+1. Minutes Played / Usage Rate
+We don’t know how many minutes each player logged.
+Example: Izzy Lahah looks like an elite defender with high GB and CT per game, but she only played 2 games. Over a full season, that impact might not hold.
+Without minutes (or per-possession stats), per-game averages can inflate small-sample players.
+2. Opponent Quality & Game Context
+Were these numbers against top-ranked teams or weaker opponents?
+Defensive contributions (CT, GB) are much harder against elite teams, so raw averages miss this.
+Similarly, turnovers might be inflated if a player always faces high-pressure defenses.
+3. Possession / Pace Adjustment
+The team’s average possessions per game isn’t included.
+A player on a fast-paced team will naturally accumulate more GB, TO, and even PPG.
+Efficiency (per 100 possessions, or per minute) would give a fairer cross-player comparison.
+4. Shot & Assist Context
+We see PPG, but not how efficiently points were scored (shot percentage, shooting volume).
+Assists_pg are given, but not secondary assists or chance creation, which affects offensive weight.
+This means “offensive efficiency” is only partially captured.
+5. Role / Position
+Attackers, midfielders, defenders, and goalkeepers naturally have different expected stats.
+For example:
+Defenders will have higher GB_pg and CT_pg.
+Attackers higher PPG, but also turnovers.
+A fair metric should normalize by role before ranking.
+6. Impact Metrics
+Plus/minus (on-off impact) or team success while on the field is missing.
+This would capture players whose presence boosts both ends even without standout raw stats.
+Why This Matters
+Without these, the rankings risk:
+Overrating small-sample players (e.g., Lahah with just 2 games).
+Undervaluing role players who contribute in ways not tracked by GB/CT/PPG.
+Misleading comparisons across positions, since defenders/attackers play very different roles.

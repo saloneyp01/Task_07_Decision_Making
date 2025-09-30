@@ -1,0 +1,69 @@
+FACTS:
+player	gp	g	a	pts	sh	sog	shot_pct	goals_pg	assists_pg
+Total	19	235	112	347	538	402	0.747	12.37	5.89
+Muchnick, Emma	19	34	7	41	71	55	0.775	1.79	0.37
+Trinkaus, Caroline	19	32	11	43	72	57	0.792	1.68	0.58
+Ward, Emma	19	30	46	76	77	55	0.714	1.58	2.42
+Vogelman, Alexa	19	21	6	27	46	35	0.761	1.11	0.32
+Cotter, Mileena	19	21	2	23	50	38	0.76	1.11	0.11
+Britton, Gracie	19	20	10	30	41	33	0.805	1.05	0.53
+Caramelli, Joely	19	16	4	20	46	29	0.63	0.84	0.21
+Guzik, Molly	19	14	5	19	34	23	0.676	0.74	0.26
+Volpe, Ashlee	8	14	2	16	31	22	0.71	1.75	0.25
+Adamson, Olivia	3	10	6	16	18	13	0.722	3.33	2
+DeVito, Sam	19	8	2	10	12	11	0.917	0.42	0.11
+Parker, Annie	15	6	1	7	13	9	0.692	0.4	0.07
+Desimone, Carlie	15	3	9	12	12	9	0.75	0.2	0.6
+Peters, Bri		2	1	3	3	3	1	0	0
+Rowley, Payton		1	0	1	3	2	0.667	0	0
+Rich, Mackenzie		1	0	1	1	1	1	0	0
+Rode, Meghan	17	1	0	1	3	2	0.667	0.06	0
+Guyette, Daniella	19	0	0	0	0	0	0	0	0
+Benoit, Kaci	19	0	0	0	2	1	0.5	0	0
+Horvit, Ana	3	0	0	0	0	0	0	0	0
+Reber, Lexi	8	0	0	0	1	1	1	0	0
+Basciano, Julia	2	0	0	0	0	0	0	0	0
+Boggs, Kendall		0	0	0	0	0	0	0	0
+Vandiver, Coco	19	0	0	0	0	0	0	0	0
+Olsen, McKenzie		0	0	0	0	0	0	0	0
+Blesi, Ella	1	0	0	0	0	0	0	0	0
+Lahah, Izzy	2	0	0	0	2	2	1	0	0
+Clark, Superia	16	0	0	0	0	0	0	0	0
+Bethea-Jones, Chloe		0	0	0	0	0	0	0	0
+Nash, Alice		0	0	0	0	0	0	0	0
+Peers, Ava		0	0	0	0	0	0	0	0
+Hanlon, Allie		0	0	0	0	0	0	0	0
+		0	0	0	0	0	0	0	0
+
+QUESTION: Are there any limitations in the dataset that could bias results?
+
+LLM RESPONSE:
+
+Yes — there are several limitations in the dataset that could bias conclusions if not considered:
+
+1. Uneven Games Played (GP)
+Some players (e.g., Adamson, Olivia: 3 GP, Volpe, Ashlee: 8 GP) have far fewer games than starters who played all 19.
+Comparing totals (goals, assists) across players without normalizing by per-game stats could unfairly undervalue part-time contributors.
+
+2. Small Sample Sizes
+Players with very few shots (e.g., Rowley, Payton: 3 shots, Rich, Mackenzie: 1 shot) show extremely high or low shooting percentages, but these are not reliable indicators of skill.
+Shot% rankings are biased toward regular shooters with larger sample sizes.
+
+3. Position & Role Bias
+Defensive and goalkeeping players (e.g., Guyette, Daniella – GK, Benoit, Kaci – defender) naturally contribute fewer goals/assists.
+Without accounting for position, conclusions may incorrectly label them as underperformers.
+
+4. Missing/Zero Data
+Some rows are incomplete or contain all zeroes (e.g., Nash, Alice; Peers, Ava; Hanlon, Allie).
+This may reflect missing data or inactive players, which could skew team averages if included.
+
+5. Aggregated Team Totals
+The "Total" row summarizes team performance, but does not capture distribution of contributions (e.g., reliance on top scorers like Muchnick, Trinkaus, Ward).
+Without context, one might overestimate balance in scoring/assists.
+
+6. Context Not Captured
+No information on minutes played, opposition strength, or game situations (e.g., power plays, clutch scoring).
+Players with fewer minutes but high efficiency could be overlooked.
+
+In summary: The dataset’s main biases come from uneven participation (GP), small sample sizes inflating efficiency stats, position-based role differences, and lack of contextual variables. Any conclusions should normalize stats (per game, per shot) and consider roles to avoid misleading interpretations.
+Do you want me to create a bias-aware version of the top scorers/assist leaders, where I re-rank them using per-game metrics only?

@@ -1,0 +1,192 @@
+FACTS:
+player	gp	gb_pg	ct_pg	to_pg	DCI
+Total	19.0	15.526315789473700	8.052631578947370	14.210526315789500	13.821052631578900
+Lahah, Izzy	2.0	3.5	4.0	0.5	7.9
+Vandiver, Coco	19.0	1.7894736842105300	2.1052631578947400	0.15789473684210500	4.189473684210530
+Benoit, Kaci	19.0	1.7894736842105300	0.631578947368421	0.2631578947368420	2.336842105263160
+Horvit, Ana	3.0	2.0	0.6666666666666670	0.6666666666666670	2.2666666666666700
+Caramelli, Joely	19.0	1.2105263157894700	0.5789473684210530	0.42105263157894700	1.5684210526315800
+DeVito, Sam	19.0	1.1578947368421100	0.6842105263157900	0.5789473684210530	1.5157894736842100
+Clark, Superia	16.0	0.875	0.8125	0.4375	1.5
+Guyette, Daniella	19.0	1.4736842105263200	0.10526315789473700	0.42105263157894700	1.263157894736840
+Vogelman, Alexa	19.0	1.3157894736842100	0.6842105263157900	1.4210526315789500	1.0
+Guzik, Molly	19.0	0.7894736842105260	0.42105263157894700	0.7368421052631580	0.7052631578947370
+Muchnick, Emma	19.0	1.4210526315789500	0.47368421052631600	1.631578947368420	0.6842105263157890
+Reber, Lexi	8.0	0.625	0.125	0.25	0.575
+Blesi, Ella	1.0	2.0	0.0	2.0	0.4000000000000000
+Desimone, Carlie	15.0	0.5333333333333330	0.13333333333333300	0.4666666666666670	0.32
+Cotter, Mileena	19.0	0.5789473684210530	0.5263157894736840	1.368421052631580	0.11578947368421000
+Hanlon, Allie		0.0	0.0	0.0	0.0
+Peers, Ava		0.0	0.0	0.0	0.0
+Boggs, Kendall		0.0	0.0	0.0	0.0
+Nash, Alice		0.0	0.0	0.0	0.0
+Bethea-Jones, Chloe		0.0	0.0	0.0	0.0
+Olsen, McKenzie		0.0	0.0	0.0	0.0
+		0.0	0.0	0.0	0.0
+Basciano, Julia	2.0	0.0	0.0	0.0	0.0
+Rich, Mackenzie		0.0	0.0	0.0	0.0
+Rowley, Payton		0.0	0.0	0.0	0.0
+Peters, Bri		0.0	0.0	0.0	0.0
+Trinkaus, Caroline	19.0	0.3157894736842110	0.2631578947368420	0.8421052631578950	-0.04210526315789480
+Rode, Meghan	17.0	0.058823529411764700	0.0	0.23529411764705900	-0.12941176470588200
+Parker, Annie	15.0	0.06666666666666670	0.0	0.26666666666666700	-0.14666666666666700
+Volpe, Ashlee	8.0	0.625	0.125	1.25	-0.22500000000000000
+Britton, Gracie	19.0	0.42105263157894700	0.0	0.8421052631578950	-0.25263157894736800
+Adamson, Olivia	3.0	0.6666666666666670	0.3333333333333330	2.3333333333333300	-0.8000000000000000
+Ward, Emma	19.0	0.3157894736842110	0.10526315789473700	2.1578947368421100	-1.2842105263157900
+
+QUESTION: 
+
+LLM RESPONSE: 
+Step 1. Define the Metric
+We want to reward:
+Positive Defense: Ground Balls (GB), Caused Turnovers (CT), Defensive Contribution Index (DCI).
+Positive Offense: Points per Game (PPG = goals_pg + assists_pg).
+Penalty: Turnovers (TO), since they hurt both defense and offense.
+A general formula:
+TWIM
+=
+α
+⋅
+PPG (offense)
+  
++
+  
+β
+⋅
+(
+GB_pg
++
+CT_pg
+)
+  
++
+  
+γ
+⋅
+DCI
+  
+−
+  
+δ
+⋅
+TO_pg
+TWIM=α⋅PPG (offense)+β⋅(GB_pg+CT_pg)+γ⋅DCI−δ⋅TO_pg
+where weights α, β, γ, δ reflect importance.
+For balance, we might start with α = 1.0, β = 0.5, γ = 0.5, δ = 0.5.
+(→ offense drives scoring, defense is secondary but still rewarded, turnovers penalized moderately).
+Step 2. Example Calculation
+Take Emma Ward:
+PPG = 4.0 (from previous table)
+GB_pg = 0.316, CT_pg = 0.105 → sum = 0.421
+DCI = –1.284
+TO_pg = 2.158
+T
+W
+I
+M
+=
+1.0
+(
+4.0
+)
++
+0.5
+(
+0.421
+)
++
+0.5
+(
+−
+1.284
+)
+−
+0.5
+(
+2.158
+)
+TWIM=1.0(4.0)+0.5(0.421)+0.5(−1.284)−0.5(2.158)
+T
+W
+I
+M
+≈
+4.0
++
+0.210
+−
+0.642
+−
+1.079
+=
+2.49
+TWIM≈4.0+0.210−0.642−1.079=2.49
+So despite being the best offensive player, turnovers and negative DCI lower her balanced rating.
+Step 3. Ranking Snapshot
+Using the same formula, here’s what we’d expect:
+Top Two-Way Contributors (high TWIM)
+Caroline Trinkaus → Solid offense (2.26 PPG), low turnovers (0.84), neutral defense.
+Emma Muchnick → Strong scoring (2.16 PPG), contributes defensively (1.42 GB_pg).
+Gracie Britton / Alexa Vogelman → Above-average PPG (~1.4–1.6) plus defensive presence.
+Defensive Specialists (moderate TWIM, low offense)
+Izzy Lahah → Very high GB_pg (3.5), CT_pg (4.0), tiny TO_pg (0.5) → elite defensive anchor despite 0 PPG.
+Coco Vandiver → 2.11 CT_pg with low TO_pg → valuable role player.
+Offense-Heavy but Risky
+Emma Ward → Still very high TWIM because offense is weighted more, but turnover-prone.
+Mileena Cotter → Steady PPG (~1.2) but defensive rating drags her down.
+Low Impact / Negative TWIM
+Players with no offensive production and weak defensive stats (e.g., Rode, Parker, Adamson, Volpe).
+Step 4. Why It Works
+Balances scoring with defense (guards against overrating “volume scorers” who turn the ball over).
+Rewards two-way players like Trinkaus & Muchnick, who add value on both ends.
+Highlights specialists like Lahah (defense-first) vs Ward (offense-first).
+Answer for your Q:
+A good balancing metric is the Two-Way Impact Metric (TWIM):
+T
+W
+I
+M
+=
+P
+P
+G
+  
++
+  
+0.5
+(
+G
+B
+_
+p
+g
++
+C
+T
+_
+p
+g
+)
+  
++
+  
+0.5
+(
+D
+C
+I
+)
+  
+−
+  
+0.5
+(
+T
+O
+_
+p
+g
+)
+TWIM=PPG+0.5(GB_pg+CT_pg)+0.5(DCI)−0.5(TO_pg)
+This ranks Emma Ward as the top offensive force but penalizes her turnovers, while Caroline Trinkaus, Emma Muchnick, and Gracie Britton emerge as more balanced scorers. On the defensive side, Izzy Lahah ranks highest, showing that TWIM can separate all-around stars from one-dimensional ones.
